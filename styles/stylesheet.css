@@ -1,12 +1,166 @@
-body {background-color:#000000;
+body {background-color:#141987;
 font-family: arial;
 font-size: 12px;
 height: 100%;
 
 }
 
-.wrapper{
-	background-color: #000000;
+.wrapper {
+  	
+  	right: 50%;
+  	position:absolute;
+	margin-top: 0px;
+ margin-right: 0px;
+ margin-bottom: 0px;
+ margin-left: 0px;
+	
+}
+.container {
+  	left: 50%;
+	position:absolute;
+  margin-top: 0px;
+ margin-right: 0px;
+ margin-bottom: 0px;
+ margin-left: 0px;
+  	
+}
+
+.wrapper, .container {
+
+	width: 1024px;
+	float: left;
+	clear: both;
+	top: 270px;
+	margin: 0px;
+	border: hidden;
+	margin-top: 0px;
+ margin-right: 0px;
+ margin-bottom: 0px;
+ margin-left: 0px;
+ color: #ffffff;
+ z-index: 100;
+	
+	}
+
+.header{
+background-color: #ffffff;
+height: 130px;
+left: 0;
+top: 0;
+position: absolute;
+width: 100%;
+z-index: -2;
+color: #ffffff;
+
+}
+
+.header2{
+background-color: #434694;
+height: 380px;
+left: 0;
+top: 130px;
+position: absolute;
+width: 100%;
+z-index: -2;
+color: #ffffff;
+
+}
+.header2content{
 	color:#ffffff;
+	font-size: 40px;
+	font-family: Book Antiqua;
+	font-weight: bold;
+	right: -9%;
+	width: 80%;
+	position: relative;
+
+}
+
+.header1shaddow{
+	background: #000000 url(../images/shadowBar.jpg);
+	height: 16px;
+	left: 0;
+	top: 130px;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+	color: #ffffff;
+}
+
+.title{
+	background: #fff url(../images/title.jpg);
+	height: 64px;
+	width: 353px;
+	top: 30px;
+	position: relative;
+
+}
+
+.headerShaddow{
+background-color: #ffffff;
+height: 90px;
+left: 0;
+top: 91;
+position: absolute;
+width: 100%;
+z-index: -2;
+color: #ffffff;
+
+}
+
+.largerShaddowContent1{
+background: #141987 url(../images/largershaddow.jpg) ;
+height: 386px;
+left: 0;
+position: absolute;
+top: 510px;
+width: 100%;
+z-index: 4;
+color: #ffffff;
+}
+
+.portItem{
+width: 958px;
+color: #ffffff;
+float: left;
+
+}
+.itemTitle{
+	color: #ffffff;
+	font-size: 24px;
+	font-family: arial;
+	font-weight: bold;
+	float:left;
+
+}
+.itemContent{
+	color: #ffffff;
+	width: 958px;
+	font-size: 12px;
+	font-family: arial;
+	float:left;
+}
+
+.itemImage{
+	color: #ffffff;
+	width: 508px;
+	font-size: 12px;
+	font-family: arial;
+	float:left;
+}
+.itemText{
+	color: #ffffff;
+	padding-left: 10px;
+	width: 44%;
+	font-size: 16px;
+	font-family: arial;
+	float:right;
+}
+
+.footer{
+	height: 300px;
+	position: relative;
+	float: left;
+	width: 100%;
 }
 
