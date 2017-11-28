@@ -96,6 +96,27 @@ color: #ffffff;
 
 }
 
+.titleSub{
+	background: #ffffff;
+	height: 20px;
+	top: 32px;
+	position: relative;
+	color: #141987;
+	font-size: 16px;
+	font-family: arial;
+	font-weight: bold;
+}
+.titleSub a:link, .titleSub a:visited{
+
+   position: relative;
+   padding:0px;
+   color: #141987;
+   font-size: 16px;
+   font-family: arial;
+	font-weight: bold;
+   }
+
+
 .headerShaddow{
 background-color: #ffffff;
 height: 90px;
