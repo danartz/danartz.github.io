@@ -1,7 +1,44 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html> 
+<html>
 <head>
+<style>
+.imageCont {
+  position: relative;
+  width: 508px;
+  float: left;
+}
+
+.image {
+  display: block;
+  width: 508px;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 508px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #ffffff;
+}
+
+.imageCont:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: #141987;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+</style>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Dan Artz Portfolio</title>
 <meta name="keywords" content="coding projects, dan artz, software, engineer, computer science
@@ -18,36 +55,69 @@
 	<div class="largerShaddowContent1"></div>
 	<div class = "wrapper">
 		<div class = "container">
-			<div class = "portItem">
-				<div class = "itemTitle">
+			<div class="portItem">
+			<div class = "itemTitle">
 					<p>Java FX GUI Card Game With AI</p>
 				</div>
-				<div class = "itemContent">
-					<div class = "itemImage">
-					<a href = "https://github.com/danartz/danartz.github.io/tree/master/Project3"><img src="cardGameCropped.jpg" height="325" width="508"></a>
-				</div>
-				<div class = "itemText">
+			<div class="imageCont">
+				<a href="https://github.com/danartz/danartz.github.io/tree/master/Project3">
+  				<img src="cardGameCropped.jpg" alt="Avatar" class="image">
+  				
+  				<div class="overlay">
+
+    			<div class="text">VIEW CODE AT GITHUB</div>
+  				</div>
+  			</a>
+			</div>
+			<div class = "itemText">
 					<p>This is a fully functioning card game I developed as a CS project, that uses some java FX animations. The opponent is a fully functioning AI script that makes decisions based on various circumstances.</p>
-				</div>
-				</div>
 			</div>
 
-			<div class = "portItem">
-				<div class = "itemTitle">
+			</div>
+
+			<div class="portItem">
+			<div class = "itemTitle">
 					<p>Java FX GUI Inventory Program</p>
 				</div>
-				<div class = "itemContent">
-					<div class = "itemImage">
-					<a href = "https://github.com/danartz/danartz.github.io/tree/master/Project2Fixed"><img src="inventoryCropped.jpg" height="525" width="508"></a>
-				</div>
-				<div class = "itemText">
+			<div class="imageCont">
+				<a href="https://github.com/danartz/danartz.github.io/tree/master/Project2Fixed">
+  				<img src="inventoryCropped.jpg" alt="Avatar" class="image" height="525" width="508">
+  				
+  				<div class="overlay">
+
+    			<div class="text">VIEW CODE AT GITHUB</div>
+  				</div>
+  			</a>
+			</div>
+			<div class = "itemText">
 					<p>This is an inventory program that allows the user to add/remove items and sort the inventory by title or date loaned. It saves the inventory to a binary file called inventory.bin. The user can loan items and mark them as returned after the item is returned to the user's inventory.</p>
-				</div>
-				</div>
-				
+			</div>
 
 			</div>
 
+			<div class="portItem">
+			<div class = "itemTitle">
+					<p>C++ Inventory & Profit Projection Software</p>
+				</div>
+			<div class="imageCont">
+				<a href="https://github.com/danartz/danartz.github.io/tree/master/InventoryC">
+  				<img src="inventoryCcropped.jpg" alt="Avatar" class="image" height="364" width="508">
+  				
+  				<div class="overlay">
+
+    			<div class="text">VIEW CODE AT GITHUB</div>
+  				</div>
+  			</a>
+			</div>
+			<div class = "itemText">
+					<p>This is a program that allows the user to: create and save an inventory, add items, search for items, and check the projected profit from selling however many units of each item. The user can also create a transaction file which modifies the values of each selected item. The transaction file is then read back in to modify the inventory. There is no GUI for this program, as it was one of the earlier programs I created.</p>
+			</div>
+
+			</div>
+
+		
+
+			
 			<div class="footer"></div>
 			
 		</div>
