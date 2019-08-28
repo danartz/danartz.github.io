@@ -1,0 +1,146 @@
+(dupSymSpl '(6 5))
+(dupSymSplCreateSublist (append (cons (car lis1) emptyL) (cons (car lis1) '())) (cdr lis1))
+
+(if (integer? (car lis1))  
+         (dupSymSplCreateSublist (cons (car lis1) (cons (car lis1) emptyL)) (cdr lis1))
+         )
+         (dupSymSplCreateSublist (cons (car lis1) emptyL) (cdr lis1))   
+
+
+
+(define (dupSymSplCreateSublist emptyL lis1)
+  (cond
+    ((null? lis1) emptyL)
+    ((not(string? (car lis1)))
+     (cond
+       ((integer? (car lis1))
+        (dupSymSplCreateSublist (cons emptyL (car lis1) ) (cdr lis1))
+         )
+        (else (dupSymSplCreateSublist (cons (car lis1) (cons (car lis1) emptyL)) (cdr lis1))) 
+       )    
+     )
+    (else (dupSymSplCreateSublist emptyL (cdr lis1)))
+    )
+  )
+
+
+;; 2
+(define (dupSymSpl lis1)
+  (define emptyL '())
+  (define emptyL2 '())
+  (dupSymSplCheckList emptyL emptyL2 lis1)
+  )
+
+(define (dupSymSplCheckList emptyL emptyL2 lis1)
+  (cond
+    ((null? lis1) emptyL)
+    ((list?(car lis1))
+     (dupSymSplCheckList (cons (DupSymSplCreateSublist emptyL2 (car lis1)) emptyL) emptyL2 (cdr lis1))
+     )
+    ((not(string? (car lis1)))
+     (cond
+       ((integer? (car lis1))
+        (dupSymSplCheckList (cons (car lis1) emptyL) emptyL2 (cdr lis1))
+        )
+       (else (dupSymSplCheckList (cons (car lis1) (cons (car lis1) emptyL)) emptyL2 (cdr lis1)))
+       )
+    )
+    (else (dupSymSplCheckList emptyL emptyL2 (cdr lis1)))
+  )
+  )
+
+(define (dupSymSplCreateSublist emptyL lis1)
+  (cond
+    ((null? lis1) emptyL)
+    ((not(string? (car lis1)))
+     (cond
+       ((integer? (car lis1))
+        (dupSymSplCreateSublist (cons (car lis1) emptyL) (cdr lis1))
+         )
+        (else (dupSymSplCreateSublist (cons (car lis1) (cons (car lis1) emptyL)) (cdr lis1))) 
+       )    
+     )
+    (else (dupSymSplCreateSublist emptyL (cdr lis1)))
+    )
+  )
+
+
+(define (postfixHelper emptyList lis1)
+  (cond
+    ((null? lis1) emptyList)
+    ((equal? '+ (car lis1))
+     ;(postfixHelper (cons emptyList (car lis1)) (cdr lis1))
+     (display "what")
+     )
+    ((equal? '* (car lis1))
+     (display "what"))
+    (else (list(postfixHelper (car lis1) (cdr lis1))))
+    )
+  )
+;;duplicator
+(define (dupSymSpl lis1)
+  (cond ((null? lis1) '())
+        ((list? (car lis1))
+         (cons (dupSymSpl (car lis1)) (dupSymSpl (cdr lis1)))
+         )
+         
+         ((not (String? (car lis1)))
+            (cond
+              ((integer? (car lis1))
+               (cons (car lis1) (dupSymSpl (cdr lis1)))
+               )
+              (else (cons (car lis1) (cons (car lis1) (dupSymSpl (cdr lis1)))))
+            )
+
+         )
+         (else (cons (dupSymSpl (car lis1))(dupSymSpl (cdr lis1))))             
+  )
+  )
+
+(define (postfix lis1)
+  (cond ((null? lis1) '())
+        ((list? (car lis1))
+         (cons (postfix (car lis1)) (postfix (cdr lis1)))
+         )
+         ((not (integer? (car lis1)))
+            (cond
+              ((integer? (car lis1))
+               (cons (car lis1) (postfix (cdr lis1)))
+               )
+              (else (append (postfix (cdr lis1)) (list (car lis1))))
+            )
+
+         )
+         (else (cdr lis1))             
+  )
+  )
+
+;; 1
+(define (symNumSep L)
+  (define numEmpty '())
+  (define alphaEmpty '())
+
+  (append
+   (appendAlpha alphaEmpty L)
+  (appendNumber numEmpty L)
+  )
+  )
+(define (appendNumber emptyL lis)
+  (cond
+    ((null? lis) (reverseOrder emptyL))
+    ((integer? (car lis))
+    (appendNumber (cons (car lis) emptyL) (cdr lis))    
+  )
+    (else (appendNumber emptyL (cdr lis)))
+  )
+  )
+
+(define (appendAlpha emptyL lis)
+  (cond
+    ((null? lis) (reverseOrder emptyL))
+    ((not (integer? (car lis)))     
+    (appendAlpha (cons (car lis) emptyL) (cdr lis))    
+  )
+    (else (appendAlpha emptyL (cdr lis)))
+  )
+  )
