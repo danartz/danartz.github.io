@@ -8,10 +8,6 @@
 #include <stdbool.h>
 #include <signal.h>
 
-//Daniel Artz
-//OS Internals CEG-4350-01
-//Project 1
-
 // Function: void parse(char *line, char **argv)
 // Purpose : This function takes in a null terminated string pointed to by 
 //           <line>.  It also takes in an array of pointers to char <argv>.
