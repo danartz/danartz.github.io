@@ -6,7 +6,7 @@ game = "noita.exe"
 # Change this to your game directory
 gamePath = "E:\\SteamLibrary 2\\steamapps\\common\\Noita"
 # Enter the path to your existing save file
-path1= 'C:\\Users\\gambla153.000\\AppData\\LocalLow\\Nolla_Games_Noita\\save00'
+path1= 'C:\\Users\\type-computer-username-here\\AppData\\LocalLow\\Nolla_Games_Noita\\save00'
 # Enter an existing directory to store your backups in
 path2='C:\\Users\\type-computer-username-here\\AppData\\LocalLow\\Nolla_Games_Noita\\save_backups'
 
