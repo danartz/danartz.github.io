@@ -4,6 +4,9 @@ ownership of Steam. These were just applications being used as examples.
 
 This script will remain free to use and will receive additional features in the future.
 
+The script will load the selected save file and then launch the game, or allow the user to backup
+their current save. Multiple saves can be maintained at a time.
+
 ##########################################################################################
 
 1.) The user will first need to install Python 3 on their computer. I haven't tested this
@@ -26,3 +29,4 @@ started.
   e.) Finally, the user can run the script by typing "python save_backup.py" in the command prompt window.
       If "python save_backup.py" doesn't work, check the name of your python installation. On my computer I run the command
       "py save_backup.py"
+      
