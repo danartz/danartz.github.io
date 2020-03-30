@@ -23,3 +23,6 @@ started.
   d.) Change the string in path2 to the exact of where you'd like to back up your roguelike
       save files. --IMPORTANT-- The directory must exist before using it. Create the directory
       before attempting to to reference it in this script.
+  e.) Finally, the user can run the script by typing "python save_backup.py" in the command prompt window.
+      If "python save_backup.py" doesn't work, check the name of your python installation. On my computer I run the command
+      "py save_backup.py"
