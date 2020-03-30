@@ -18,6 +18,7 @@ path2='C:\\Users\\type-computer-username-here\\AppData\\LocalLow\\Nolla_Games_No
 import os
 import shutil
 import subprocess
+import datetime as datetime
 
 def copy_file(src, dest):
     if(not os.path.isdir(dest)):
@@ -77,7 +78,7 @@ while userInput != "q":
     if userInput == "s":
         saveIndex = select_file_save(saves)
         if(saveIndex != -1):
-            saveFile = path2 + "\\NoitaSave" + str(saveIndex)
+            saveFile = path2 + "\\" + str(datetime.datetime.today()).replace(" ", "-").replace(".", "-").replace(":", "-")
             copy_file(path1, saveFile)
             print(saveFile + " saved -- backed up")
     # Load save file and launch game
