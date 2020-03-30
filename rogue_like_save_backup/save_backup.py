@@ -53,7 +53,11 @@ def select_file_load(saves):
     print("Saved files -- LOAD TO GAME")
     for i in range(len(saves)):
         print("  " + str(i + 1) + "|   |" + saves[i])
-    uInput = int(input("Select a File to load: "))
+    try:
+        uInput = int(input("Select a File to load: "))
+    except:
+        print("Invalid game save slot!")
+        return -1
     return saves[uInput - 1]
 
 def main_options():
@@ -79,12 +83,13 @@ while userInput != "q":
     # Load save file and launch game
     elif userInput == "l":
         loadIndex = select_file_load(saves)
-        loadFile = path2 + "\\" + str(loadIndex)
-        load_file(path1, loadFile)
-        print(loadFile + " loaded")
-        #Launch game
-        print("Launching " + game +" enjoy :)")
-        os.chdir(gamePath)
-        os.system(game)
+        if(loadIndex != -1):
+            loadFile = path2 + "\\" + str(loadIndex)
+            load_file(path1, loadFile)
+            print(loadFile + " loaded")
+            #Launch game
+            print("Launching " + game +" enjoy :)")
+            os.chdir(gamePath)
+            os.system(game)
     saves = os.listdir(path2)
     userInput = main_options()
