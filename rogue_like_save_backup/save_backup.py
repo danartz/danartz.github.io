@@ -39,14 +39,13 @@ def select_file_save(saves):
     for i in range(len(saves)):
         print("  " + str(i + 1) + "|   |" + saves[i])
     print("  " + str(len(saves) + 1) + "|   |"+"--EMPTY SLOT-- ")
-
-    uInput = input("Select a File slot to save over: ")
-    if uInput.isdigit():
+    try:
+        uInput = int(input("Select a File slot to save over: "))
         if int(uInput) > (len(saves) + 1):
             print("Invalid file slot!")
             return -1
         return uInput
-    else:
+    except:
         print("Invalid file slot!")
         return -1
 
@@ -78,7 +77,10 @@ while userInput != "q":
     if userInput == "s":
         saveIndex = select_file_save(saves)
         if(saveIndex != -1):
-            saveFile = path2 + "\\" + str(datetime.datetime.today()).replace(" ", "-").replace(".", "-").replace(":", "-")
+            if int(saveIndex) == len(saves) + 1:
+                saveFile = path2 + "\\" + str(datetime.datetime.today()).replace(" ", "-").replace(".", "-").replace(":", "-")
+            elif int(saveIndex) <= len(saves):
+                saveFile = path2 + "\\" + str(saves[saveIndex-1])
             copy_file(path1, saveFile)
             print(saveFile + " saved -- backed up")
     # Load save file and launch game
