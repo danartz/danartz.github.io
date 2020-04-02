@@ -42,11 +42,9 @@ def select_file_save(saves):
     try:
         uInput = int(input("Select a File slot to save over: "))
         if int(uInput) > (len(saves) + 1):
-            print("Invalid file slot!")
             return -1
         return uInput
     except:
-        print("Invalid file slot!")
         return -1
 
 def select_file_load(saves):
@@ -56,7 +54,8 @@ def select_file_load(saves):
     try:
         uInput = int(input("Select a File to load: "))
     except:
-        print("Invalid game save slot!")
+        return -1
+    if uInput > len(saves):
         return -1
     return saves[uInput - 1]
 
@@ -83,6 +82,8 @@ while userInput != "q":
                 saveFile = path2 + "\\" + str(saves[saveIndex-1])
             copy_file(path1, saveFile)
             print(saveFile + " saved -- backed up")
+        else:
+            print("Invalid file slot!")
     # Load save file and launch game
     elif userInput == "l":
         loadIndex = select_file_load(saves)
@@ -94,5 +95,7 @@ while userInput != "q":
             print("Launching " + game +" enjoy :)")
             os.chdir(gamePath)
             os.system(game)
+        else:
+            print("Invalid file slot!")
     saves = os.listdir(path2)
     userInput = main_options()
