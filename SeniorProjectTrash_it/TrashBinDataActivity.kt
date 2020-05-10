@@ -153,11 +153,11 @@ class TrashBinDataActivity : AppCompatActivity(){
                 //Toast.makeText(this, daysOfWeek[dayOfWeekPredIndex], Toast.LENGTH_LONG).show()
                 trashDayPrediction.text = daysOfWeek[(dayOfWeekPredIndex + 3) % daysOfWeek.size]
             }
-            else if((heightCapacity >= 25) && (heightCapacity <= 49))
+            else if(heightCapacity <= 49)
             {
                 trashDayPrediction.text = daysOfWeek[(dayOfWeekPredIndex + 2) % daysOfWeek.size]
             }
-            else if((heightCapacity >= 50) && (heightCapacity <= 74)){
+            else if(heightCapacity <= 74){
                 trashDayPrediction.text = daysOfWeek[(dayOfWeekPredIndex + 1) % daysOfWeek.size]
             }else{
                 trashDayPrediction.text = daysOfWeek[dayOfWeekPredIndex]
